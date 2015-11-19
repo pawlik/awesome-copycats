@@ -555,6 +555,29 @@ globalkeys = awful.util.table.join(
             os.execute(string.format("amixer -c 1 set %s toggle", volumewidget.channel))
             volumewidget.update()
         end),
+
+    awful.key({}, "XF86MonBrightnessUp", 
+	function ()
+	    os.execute("xbacklight +10%")
+	end),
+
+
+    awful.key({"Shift"}, "XF86MonBrightnessUp", 
+	function ()
+	    os.execute("xbacklight -set 100")
+	end),
+
+    awful.key({}, "XF86MonBrightnessDown", 
+	function ()
+	    os.execute("xbacklight -10%")
+	end),
+
+    awful.key({"Shift"}, "XF86MonBrightnessDown", 
+	function ()
+	    os.execute("xbacklight -set 1")
+	end),
+
+
 --[[ don't know what that does
     awful.key({ altkey, "Control" }, "m",
         function ()
