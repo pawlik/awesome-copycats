@@ -188,7 +188,7 @@ mpdwidget = lain.widgets.mpd({
 memicon = wibox.widget.imagebox(beautiful.widget_mem)
 memwidget = lain.widgets.mem({
     settings = function()
-        widget:set_text(" " .. mem_now.used .. "MB ")
+        widget:set_text(" " .. string.format('%.2f', tonumber(mem_now.used)/1024) .. string.format("/%.2f GB", tonumber(mem_now.total)/1024  ))
     end
 })
 
