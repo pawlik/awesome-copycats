@@ -230,7 +230,8 @@ batwidget = lain.widgets.bat({
             _status = '++ ' -- it's charging here :D
             baticon:set_image(beautiful.widget_ac)
         elseif tonumber(bat_now.perc) <= 5 then
-            baticon:set_image(beautiful.widget_battery_empty)
+	    awful.util.spawn(lock_and_suspend)
+            -- baticon:set_image(beautiful.widget_battery_empty)
         elseif tonumber(bat_now.perc) <= 15 then
             baticon:set_image(beautiful.widget_battery_low)
         else
