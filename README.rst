@@ -7,6 +7,9 @@ This is my "tweaked" version of Powerarrow Darker theme from copycat-killer
 please refer to :Source: https://github.com/copycat-killer/awesome-copycats 
 for originals
 
+Usefull sources
+===============
+
 .. _BY-NC-SA: http://creativecommons.org/licenses/by-nc-sa/4.0/
 .. _Awesome: http://awesome.naquadah.org/
 .. _tip: https://bbs.archlinux.org/profile.php?id=51327
