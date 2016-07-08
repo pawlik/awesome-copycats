@@ -563,18 +563,18 @@ globalkeys = awful.util.table.join(
 
     awful.key({}, "XF86MonBrightnessUp", 
 	function ()
-	    os.execute("xbacklight +10%")
+	    os.execute("xbacklight -inc 10%")
 	end),
 
 
     awful.key({"Shift"}, "XF86MonBrightnessUp", 
 	function ()
-	    os.execute("xbacklight -set 100")
+	    os.execute("xbacklight -set 100%")
 	end),
 
     awful.key({}, "XF86MonBrightnessDown", 
 	function ()
-	    os.execute("xbacklight -10%")
+	    os.execute("xbacklight -dec 10%")
 	end),
 
     awful.key({"Shift"}, "XF86MonBrightnessDown", 
