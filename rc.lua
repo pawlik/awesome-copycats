@@ -446,7 +446,7 @@ root.buttons(awful.util.table.join(
 globalkeys = awful.util.table.join(
     -- Take a screenshot
     -- https://github.com/copycat-killer/dots/blob/master/bin/screenshot
-    awful.key({ altkey }, "p", function() os.execute("screenshot") end),
+    awful.key({ altkey }, "p", function() os.execute("gnome-screenshot") end),
 
     awful.key({ altkey }, "l", function() os.execute("sleep 0.5; xset dpms force off; gnome-screensaver-command -l") end),
 
