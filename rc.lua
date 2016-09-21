@@ -583,6 +583,11 @@ globalkeys = awful.util.table.join(
 	end),
 
 
+    awful.key({}, "XF86Sleep", 
+	function ()
+	    os.execute("gnome-screensaver-command -l;  sudo pm-suspend")
+	end),
+
 --[[ don't know what that does
     awful.key({ altkey, "Control" }, "m",
         function ()
