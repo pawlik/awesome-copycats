@@ -441,12 +441,19 @@ root.buttons(awful.util.table.join(
     awful.button({ }, 5, awful.tag.viewprev)
 ))
 -- }}}
+--
+--
+screenshot_out = '-o ~/Pictures/Screenshots/%Y-%m-%d_%T_$nb_name_$R.png'
+capture_all = 'shutter -f -e -c ' .. screenshot_out 
+capture_sel = 'shutter -s -e -c ' .. screenshot_out 
+capture_el = 'shutter --section -e -c ' .. screenshot_out 
 
 -- {{{ Key bindings
 globalkeys = awful.util.table.join(
     -- Take a screenshot
     -- https://github.com/copycat-killer/dots/blob/master/bin/screenshot
-    awful.key({ altkey }, "p", function() os.execute("gnome-screenshot") end),
+    awful.key({ altkey }, "p", function() os.execute(capture_sel) end),
+    awful.key({ altkey, "Shift" }, "p", function() os.execute(capture_all) end),
 
     awful.key({ altkey }, "l", function() os.execute("sleep 0.5; xset dpms force off; gnome-screensaver-command -l") end),
 
